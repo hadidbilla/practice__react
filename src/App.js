@@ -23,14 +23,18 @@ const Page4 = () => (
 );
 function App() {
   return (
-    <div className="App">
-      <Wizard>
+    <Wizard steps={4}>
+      <Wizard.Pages className="wizard__content">
         <Page1 />
         <Page2 />
         <Page3 />
         <Page4 />
-      </Wizard>
-    </div>
+      </Wizard.Pages>
+      <div className="wizard__buttons">
+        <Wizard.ButtonPrev />
+        <Wizard.ButtonNext />
+      </div>
+    </Wizard>
   );
 }
 

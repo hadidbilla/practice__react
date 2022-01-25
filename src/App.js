@@ -1,23 +1,35 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Wizard from "./Wizard";
 
+const Page1 = () => (
+  <div className="">
+    <h1>i am page one</h1>
+  </div>
+);
+const Page2 = () => (
+  <div className="">
+    <h1>i am page two</h1>
+  </div>
+);
+const Page3 = () => (
+  <div className="">
+    <h1>i am page three</h1>
+  </div>
+);
+const Page4 = () => (
+  <div className="">
+    <h1>i am page five</h1>
+  </div>
+);
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Wizard>
+        <Page1 />
+        <Page2 />
+        <Page3 />
+        <Page4 />
+      </Wizard>
     </div>
   );
 }
